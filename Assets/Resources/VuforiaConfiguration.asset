@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vuforia:
     vuforiaLicenseKey: 
-    ufoLicenseKey: QVNiS1NSTC8vLy8vQUFBQUtDc3ludU40RGtQN2psTVYyZzBCUTVRVXdiNEU2TVN4eTdlM0JDa3RJMS9lNncwc0p3QkRlY3VVV0dCMEQxb2JZRFN5eDl2RldDb3ZhUWpZbnZsaDFwZFh1VzR6WDBiOGo4Q040dC9PYlVXQm1Lb1lTTnlWN3p6dDBLWEtHd2d2emNodldEb2paaXVMaWkyVlkxUDVhb056WjJheEloUTNKemxvb3hZTFE3aWZvZlZqanRDdDlFVUFGRE9zZDBtNEpCNFBicnJhRkdzaldKMHV5S2lzbitaY0ZqY0RSUWxaQzAybHNIQVZzdjlyU3AxS21TaVFhd3dsQW1pdElPV1QzZGJhS0wwQ0xYdW9IblNab0VwNTdId1cwQ1ExMVdSSldCTHAzbXAzOVBXeFdieXN6K0dWUDFmbHVkbTdiU0FkczFDdTY2dWVKOXFnczVmc25vQjR1VDI0UFEwVVZDUG9SRFdoN1ljRHY3NGg=
+    ufoLicenseKey: QVh0clc2SC8vLy8vQUFBQUtPTUR4RFlCdUU0U2xuNHY2dVYrNkRFNGs0aG5mbDI2T3hrY09DalJHTkp0djBKUHA2UHlGRUFFS2p2N1RCY1Zwc2Vja0JYQ1NYSmMxRVR4YnIvRnpUSVRha3hOTHluNUZIUzBXcEkwWUxKMFIvcjhWSWxIbGpqeXFrakV1Ylo1OEQ1ckdOa0ptVDZWOCs1cVVvZmJUTXc2K050WWVBMnJheksycmM3cmZFRE82bFF6L1JJMkNDL2hLN1d2dFYvdkRXdFcwVEVkZHZvby9zUmYyRzlMVEJPOWNyM3JMZ0FMN1ZSK3NhWDRtaFFIRnRaWnEzQlBRMHJpd2g3RUExTlBjSVZqcWJEekNIK0d1WlRHc2ljTUVJOUh0V3k4MjhVYXlUWXBvVHpQSEJzNWU3bk9zZ2Q0aXZvT2x6YUNZamFTT1BjQmMyUDU2MHA5NlQvNkttczJkL1dycFFYYmltTlFoNjhHR1grMll3SWI=
     delayedInitialization: 0
     cameraFocusModeSetting: 2
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
+    maxSimultaneousImageTargets: 4
     virtualSceneScaleFactor: 1
     modelTargetRecoWhileExtendedTracked: 1
-    shareRecordingsInITunes: 0
+    shareRecordingsInITunes: 1
     logLevel: 0
-    version: 10.0.2
+    version: 10.16.0
     eulaAcceptedVersions: '{"Values":["","0.0","10.18"]}'
   database:
-    disableModelExtraction: 0
+    disableModelExtraction: 1
   shaders:
     depthMaskShader: {fileID: 4800000, guid: 1ce7eb78425fb1540838bc9d5d95857a, type: 3}
     outlineShader: {fileID: 4800000, guid: c1ded68d068051d4f92650fcddaae5c7, type: 3}
@@ -44,8 +44,8 @@ MonoBehaviour:
     autoImportArcore: 1
     thirdPartyARCoreClientDetected: 0
   playmode:
-    mRecordingPath: 
-    playModeType: 0
+    mRecordingPath: Assets/SamplesResources/Recordings/area_target.mp4
+    playModeType: 2
   webcam:
     renderTextureLayer: 30
   packageInformation:
