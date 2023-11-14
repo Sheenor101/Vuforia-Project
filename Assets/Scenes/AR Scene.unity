@@ -2501,14 +2501,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Pattern
+  mTrackableName: Drone
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/VuforiaMars_Images.xml
-  mAspectRatio: 0.5625
-  mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.112500004
-  mRuntimeTexture: {fileID: 2800000, guid: 16251a83b11285f408b47b3afa0a8cad, type: 3}
+  mAspectRatio: 1.7272727
+  mImageTargetType: 0
+  mWidth: 0.06985
+  mHeight: 0.12065
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1070006343}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Pattern
+  mTargetName: Drone
   mDatasetName: Vuforia/VuforiaMars_Images.xml
   mCastedBehaviour: {fileID: 1070006343}
   mMeshFilter: {fileID: 0}
@@ -3589,7 +3589,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: c6045ffd0db911d418ecf014e1fbd650,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1406343689}
   m_SourcePrefab: {fileID: 100100000, guid: c6045ffd0db911d418ecf014e1fbd650, type: 3}
 --- !u!1 &1328513690
 GameObject:
@@ -3883,6 +3887,26 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1 &1406343687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: c6045ffd0db911d418ecf014e1fbd650,
+    type: 3}
+  m_PrefabInstance: {fileID: 1252371979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1406343689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406343687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31c8b429e92aa43a105e42b76d84a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 45
+  rotationVector: {x: 10, y: 0, z: 0}
 --- !u!1 &1443330810
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,6 +4634,7 @@ GameObject:
   - component: {fileID: 1682716843}
   - component: {fileID: 1682716842}
   - component: {fileID: 1682716845}
+  - component: {fileID: 1682716846}
   m_Layer: 8
   m_Name: ImageTarget_Astronaut
   m_TagString: Untagged
@@ -4657,10 +4682,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1406343689}
+        m_TargetAssemblyTypeName: imageTargetInteractons, Assembly-CSharp
+        m_MethodName: ToggleRotation
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1406343689}
+        m_TargetAssemblyTypeName: imageTargetInteractons, Assembly-CSharp
+        m_MethodName: ToggleRotation
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1682716843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4687,7 +4736,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1682716845}
+  mPreview: {fileID: 1682716846}
 --- !u!4 &1682716844
 Transform:
   m_ObjectHideFlags: 0
@@ -4705,6 +4754,20 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1682716845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682716838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31c8b429e92aa43a105e42b76d84a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 45
+  rotationVector: {x: 10, y: 0, z: 0}
+--- !u!114 &1682716846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
