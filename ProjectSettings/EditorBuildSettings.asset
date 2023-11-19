@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu Scene.unity
+    guid: 6ac82cfb6bebe9042ad8e885bd8fc9ef
+  - enabled: 1
+    path: Assets/Scenes/Game Scene.unity
+    guid: fa7841634414b1c4486686ca4d9fdf67
+  - enabled: 1
     path: Assets/SamplesResources/Scenes/0-Splash.unity
     guid: 7238041e8d31f4d439b8851a5d4bb6fa
   - enabled: 1
@@ -54,3 +60,4 @@ EditorBuildSettings:
     path: Assets/SamplesResources/Scenes/3-Barcodes.unity
     guid: a3102d51f16474e8986f86570e9bed1f
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

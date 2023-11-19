@@ -11,17 +11,20 @@ public class ImageTargetInteractions : MonoBehaviour
     
     public Vector3 rotationVector = new Vector3(10f,0,0);
 
+    public Vector3 scaleChange; 
+
      public AudioSource sound;
 
      public AudioClip song;
 
-    public Vector3 scaleChange; 
-
+    
     private bool shouldRotate;
 
     private bool shouldScale;
 
     private bool shouldPlaySound;
+
+    private bool shouldChangeText;
 
     // Update is called once per frame
     void Update()
@@ -34,6 +37,7 @@ public class ImageTargetInteractions : MonoBehaviour
     public void ToggleRotation(bool status) => shouldRotate = status;
     public void ToggleScaling(bool status) => shouldScale = status;
     public void ToggleSound(bool status) => shouldPlaySound = status;
+
 
     private void HandleRotation()
     {
@@ -69,4 +73,5 @@ public class ImageTargetInteractions : MonoBehaviour
             sound.Stop();
         }
     }
+
 }
