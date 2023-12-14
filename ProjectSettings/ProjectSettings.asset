@@ -959,7 +959,6 @@ PlayerSettings:
       InternetClientServer: False
       VideosLibrary: False
       Objects3D: False
-      InternetClient: True
       BlockedChatMessages: False
       PhoneCall: False
       UserDataTasks: False
@@ -979,6 +978,7 @@ PlayerSettings:
       PointOfService: False
       RecordedCallsFolder: False
       Contacts: False
+      InternetClient: True
       Proximity: False
       CodeGeneration: False
       EnterpriseAuthentication: False
