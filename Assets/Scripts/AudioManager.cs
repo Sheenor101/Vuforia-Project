@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameManager{
+namespace GameManagers{
     public class AudioManager : MonoBehaviour
     {
         public static AudioManager Instance;
