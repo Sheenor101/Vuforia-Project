@@ -69,7 +69,7 @@ namespace GameManagers{
             }
             else{
                 Time.timeScale = 1;
-                AudioManager.nstance.PlaySoundEffect("Unpause");
+                AudioManager.Instance.PlaySoundEffect("Unpause");
             }
             uiManager.TogglePauseMenu(isPaused);
         }

@@ -921,6 +921,7 @@ MonoBehaviour:
   audioPlay: {fileID: 0}
   soundEffects:
   - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &589281400
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,7 +1781,7 @@ GameObject:
   - component: {fileID: 1220050258}
   - component: {fileID: 1220050257}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1793,8 +1794,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220050255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000015258793}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2161,7 +2162,7 @@ GameObject:
   - component: {fileID: 1735701070}
   - component: {fileID: 1735701069}
   m_Layer: 5
-  m_Name: Kick
+  m_Name: Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2711,6 +2712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048604823}
   - component: {fileID: 2048604822}
+  - component: {fileID: 2048604824}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2747,6 +2749,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2048604824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048604821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f857ee57c7fa4badb9a641f54244e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  uiManager: {fileID: 2048604822}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
