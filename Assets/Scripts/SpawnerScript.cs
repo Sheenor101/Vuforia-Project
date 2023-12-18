@@ -2,34 +2,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 
 
 public class SpawnerScript : MonoBehaviour
 
 
-//i want to change my code to an automatic spawn, rather than one that is triggered by a key press.
-// I was getting an error saying "'Instantiate' does not exist in the current context" so I went to the Unity forums 
-// and found this code (https://forum.unity.com/threads/instantiate-does-not-exist-in-the-current-context.48207/)
-// I am still not happy with this as I dont want the player to have to press a button to spawn the object, I want it to spawn automatically.
-  
-  // Instantiate a rigidbody then set the velocity
+//I went back to this code as the other was not working. CoPilot filled this in for me so I thought I would save and see what happened. 
+// I then started messing around with the code to try and get the objects to move int he direction I want. Pure trial and error
+
 {
-    // Assign a Rigidbody component in the inspector to instantiate
+    public GameObject[] obj;
 
-    public Rigidbody projectile;
+    public float spawnMin = 1f;
+    public float spawnMax = 2f;
 
-    void Update()
+    // Start is called before the first frame update
+    void Begin()
     {
-        // Ctrl was pressed, launch a projectile
-        if (Input.GetButtonDown("Fire1"))
-        {
-            // Instantiate the projectile at the position and rotation of this transform
-            Rigidbody clone;
-            clone = Instantiate(projectile, transform.position, transform.rotation);
+        Spawn();
+        
+    }
 
-            // Give the cloned object an initial velocity along the current
-            // object's Z axis
-            clone.velocity = transform.TransformDirection(Vector3.forward * 10);
-        }
+    void Spawn()
+    {
+        Instantiate(obj[Random.Range(0, obj.GetLength(0))], transform.position, Quaternion.identity);
+        Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+       
     }
 }
+  
