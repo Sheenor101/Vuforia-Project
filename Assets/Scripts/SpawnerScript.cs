@@ -12,13 +12,13 @@ public class SpawnerScript : MonoBehaviour
 // I then started messing around with the code to try and get the objects to move int he direction I want. Pure trial and error
 
 {
-    public GameObject[] obj;
+    public GameObject obj;
 
     public float spawnMin = 1f;
     public float spawnMax = 2f;
 
     // Start is called before the first frame update
-    void Begin()
+    void Start()
     {
         Spawn();
         
@@ -26,7 +26,7 @@ public class SpawnerScript : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(obj[Random.Range(0, obj.GetLength(0))], transform.position, Quaternion.identity);
+        Instantiate(obj, transform.position, Quaternion.identity);
         Invoke("Spawn", Random.Range(spawnMin, spawnMax));
        
     }
