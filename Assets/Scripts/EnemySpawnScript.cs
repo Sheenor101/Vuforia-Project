@@ -1,3 +1,7 @@
+// The food is spawning ok, but it's going in strange directions. I want to make it move towards my character, 
+//so I looked at this tutorial: https://www.youtube.com/watch?v=wp8m6xyIPtE and added in some code from that
+
+
 //I am using this tutorial to learn how to spawn objects https://www.youtube.com/watch?v=aBzpvUXibw0
 using System.Collections;
 using System.Collections.Generic;
@@ -13,15 +17,16 @@ public class SpawnerScript : MonoBehaviour
 {
     public GameObject item;
     public float delay = 2f;
-    public float speed = 2f;
+    public float speed = 0.5f;
     float nextTimeToSpawn;
+    [SerializeField] private GameObject Mouse1;
 
     // Start is called before the first frame update
     void Start()
     {
         nextTimeToSpawn = Time.time;
         
-    }
+    } 
 
     void Update()
     {
@@ -44,7 +49,7 @@ public class Move : MonoBehaviour
 
    
     {
-       transform.Translate(Vector3.forward * speed * Time.deltaTime);
+       transform.position = Vector3.MoveTowards(transform.position, GameObject.Find("Mouse1").transform.position, speed * Time.deltaTime);
     }
     //void OnBecomeInvisible()
     //{
