@@ -44,7 +44,7 @@ public class SpawnerScript : MonoBehaviour
 }
 public class Move : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 0.1f;
     void Update()
 
    

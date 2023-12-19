@@ -5,9 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KickScript : MonoBehaviour
+public class GrabScript : MonoBehaviour
 {
-    public Animator myKick;
+    public Animator myGrab;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +21,13 @@ public class KickScript : MonoBehaviour
         
     }
 
-    public void PlayKick()
+    public void PlayGrab()
     {
-        myKick.Play("Kick");
+        myGrab.Play("Grab");
     }
-    public void StopKick()
+    public void StopGrab()
     {
-        myKick.Play("Idle");
+        myGrab.Play("Grab");
     }
 }
 
