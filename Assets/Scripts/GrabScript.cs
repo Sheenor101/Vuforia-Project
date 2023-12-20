@@ -25,9 +25,10 @@ public class GrabScript : MonoBehaviour
     {
         myGrab.Play("Grab");
     }
-    public void StopGrab()
-    {
-        myGrab.Play("Grab");
-    }
+    // The above tutorial creates two buttons - one to start the aniamtiona nd one to stop it. I only need one button so I have diabled the below code.
+    //public void StopGrab()
+   // {
+    //    myGrab.Play("Grab");
+   // }
 }
 
