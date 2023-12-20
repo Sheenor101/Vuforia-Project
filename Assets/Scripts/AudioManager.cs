@@ -10,7 +10,6 @@ namespace GameManagers{
         public static AudioManager Instance;
 
         public AudioSource audioPlay;
-        
         public AudioClip[] soundEffects;
 
         private void Awake(){
