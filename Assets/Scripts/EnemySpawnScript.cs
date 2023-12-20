@@ -37,8 +37,7 @@ public class SpawnerScript : MonoBehaviour
           go.AddComponent<Move>();
           go.AddComponent<Move>().speed = speed; 
           
-          // I'm looking at this tutorial (https://www.youtube.com/watch?v=rdX7nhH6jdM) to try and get the food to make a sound when it spawns. Not sure if Its going in the right place
-    AudioManager.instance.Play("Spawn");
+    
     }
   
 }
